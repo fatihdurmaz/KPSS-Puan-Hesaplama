@@ -15,10 +15,17 @@ Bu serinin sonunda SwiftUI ile sıfırdan KPSS Puan Hesaplama uygulaması geliş
 Bu seride aşağıdaki konuları ele alacağız:
 
 TabView ve NavigationStack: Uygulamanızın farklı sayfaları arasında geçiş yapmanızı sağlayan bu bileşenleri öğreneceksiniz.
+
 Form Bileşenleri: Kullanıcılardan veri almanızı sağlayan bu bileşenleri kullanarak uygulamanızın işlevselliğini artıracaksınız.
+
 AdMob ile Pasif Gelir Elde Etme: Uygulamanızda reklam göstererek pasif gelir elde etmeyi öğreneceksiniz.
+
 Firebase ile Push Notification Gönderme: Kullanıcılarınıza bildirimler göndererek uygulamanızı daha kullanışlı hale getireceksiniz.
+
 SwiftData ile Verilerini Yönet: Uygulamanızdaki verileri yönetmek için SwiftData'yı kullanacaksınız.
+
 Onboarding Ekranı Ekleme: Kullanıcılarınızı uygulamanıza alıştırmak için onboarding ekranı ekleyebileceksiniz.
+
 Mağazada Oylama ve Paylaşma: Uygulamanızın App Store'daki sıralamasını iyileştirmek için oylama ve paylaşma özelliklerini kullanacaksınız.
+
 Observation Macro ve Haptic Feedback: Uygulamanızın kullanıcı deneyimini iyileştirmek için observation macro ve haptic feedback'i kullanacaksınız.
