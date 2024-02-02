@@ -6,7 +6,7 @@
 ![Platform](https://img.shields.io/badge/SwiftUI-4-green.svg)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
-[<img src="https://yourimageshare.com/ib/QN2zYujrbL.webp">](https://youtu.be/sZx99k6XqqM "SwiftUI ile KPSS Puan Hesaplama Uygulaması")
+[<img src="https://yourimageshare.com/ib/QN2zYujrbL.webp">](https://www.youtube.com/watch?v=QeRIqr8V8oE&list=PL7YHguPv2mAxvbiMw3NwVtenV12wxlDPy "SwiftUI ile KPSS Puan Hesaplama Uygulaması")
 
 
 ## Hakkında
