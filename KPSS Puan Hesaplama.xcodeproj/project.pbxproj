@@ -93,8 +93,8 @@
 		DEBB881F2B6992AD00DA8B6B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DE02B15C2B6AE52E003C5485 /* SharedViews */,
 				DEBB881D2B69926C00DA8B6B /* RootView.swift */,
+				DE02B15C2B6AE52E003C5485 /* SharedViews */,
 				DEBB88212B6992D700DA8B6B /* MainView.swift */,
 				DEBB88232B6992EA00DA8B6B /* ResultView.swift */,
 				DEBB88252B69987400DA8B6B /* OrtaogretimView.swift */,
