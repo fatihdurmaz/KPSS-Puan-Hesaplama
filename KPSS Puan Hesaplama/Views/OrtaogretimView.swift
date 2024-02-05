@@ -56,6 +56,7 @@ struct OrtaogretimView: View {
                     if(gkDogruSayisi + gkYanlisSayisi > 60){
                         Text("Toplam doğru ve yanlış sayıları 60'ı geçemez.")
                             .foregroundStyle(.red)
+                            .transition(/*@START_MENU_TOKEN@*/.identity/*@END_MENU_TOKEN@*/)
                     }
                 }
                 
