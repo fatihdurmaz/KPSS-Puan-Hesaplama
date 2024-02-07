@@ -22,17 +22,19 @@ struct LisansView: View {
             
             Form {
                 Section {
-                    Stepper("Doğru Sayısı: \(gyDogruSayisi, specifier: "%.0f")", value: $gyDogruSayisi, in: 1...60)
+                    Stepper( value: $gyDogruSayisi, in: 1...60){
+                        Label("Doğru Sayısı: \(gyDogruSayisi, specifier: "%.0f")", systemImage: "checkmark.circle")
+                    }
                         .sensoryFeedback(.selection, trigger: gyDogruSayisi)
-                        .bold()
-                    
-                    Stepper("Yanlış Sayısı: \(gyYanlisSayisi, specifier: "%.0f")", value: $gyYanlisSayisi, in: 0...60)
+                    Stepper(value: $gyYanlisSayisi, in: 0...60){
+                        Label("Yanlış Sayısı: \(gyYanlisSayisi, specifier: "%.0f")", systemImage: "xmark.circle")
+                    }
                         .sensoryFeedback(.selection, trigger: gyYanlisSayisi)
-                        .bold()
-                    
                     
                 } header: {
                     Text("Genel Yetenek")
+                        .bold()
+                        .foregroundStyle(.main)
                         .textCase(.none)
                 } footer: {
                     if(gyDogruSayisi + gyYanlisSayisi > 60){
@@ -42,16 +44,20 @@ struct LisansView: View {
                 }
                 
                 Section {
-                    Stepper("Doğru Sayısı: \(gkDogruSayisi, specifier: "%.0f")", value: $gkDogruSayisi, in: 1...60)
+                    Stepper(value: $gkDogruSayisi, in: 1...60){
+                        Label("Doğru Sayısı: \(gkDogruSayisi, specifier: "%.0f")", systemImage: "checkmark.circle")
+                    }
                         .sensoryFeedback(.selection, trigger: gkDogruSayisi)
-                        .bold()
                     
-                    Stepper("Yanlış Sayısı: \(gkYanlisSayisi, specifier: "%.0f")", value: $gkYanlisSayisi, in: 0...60)
+                    Stepper(value: $gkYanlisSayisi, in: 0...60){
+                        Label("Yanlış Sayısı: \(gkYanlisSayisi, specifier: "%.0f")", systemImage: "xmark.circle")
+                    }
                         .sensoryFeedback(.selection, trigger: gkYanlisSayisi)
-                        .bold()
                     
                 } header: {
                     Text("Genel Kültür")
+                        .bold()
+                        .foregroundStyle(.main)
                         .textCase(.none)
                 } footer: {
                     if(gkDogruSayisi + gkYanlisSayisi > 60){
@@ -62,9 +68,7 @@ struct LisansView: View {
                 
                 Section {
                     Text("2023 KPSS Puanı: \(sonuc2023, specifier: "%.3f")")
-                        .bold()
                     Text("2022 KPSS Puanı: \(sonuc2022, specifier: "%.3f")")
-                        .bold()
                     
                     HesaplaButton(title: "Hesapla") {
                         let gkNet = gkDogruSayisi - (gkYanlisSayisi / 4)
@@ -80,6 +84,8 @@ struct LisansView: View {
                     .sensoryFeedback(.success, trigger: sonuc2022)
                 } header: {
                     Text("Sonuç")
+                        .bold()
+                        .foregroundStyle(.main)
                         .textCase(.none)
                 }
             }

@@ -21,17 +21,19 @@ struct OrtaogretimView: View {
             
             Form {
                 Section {
-                    Stepper("Doğru Sayısı: \(gyDogruSayisi, specifier: "%.0f")", value: $gyDogruSayisi, in: 1...60)
-                        .sensoryFeedback(.selection, trigger: gyDogruSayisi)
-                        .bold()
+                    Stepper(value: $gyDogruSayisi,in: 1...60) {
+                        Label("Doğru Sayısı: \(gyDogruSayisi, specifier: "%.0f")", systemImage: "checkmark.circle")
+                    }                   
+                    .sensoryFeedback(.selection, trigger: gyDogruSayisi)
                     
-                    Stepper("Yanlış Sayısı: \(gyYanlisSayisi, specifier: "%.0f")", value: $gyYanlisSayisi, in: 0...60)
-                        .sensoryFeedback(.selection, trigger: gyYanlisSayisi)
-                        .bold()
-                    
+                    Stepper(value: $gyYanlisSayisi,in: 1...60) {
+                        Label("Yanlış Sayısı: \(gyYanlisSayisi, specifier: "%.0f")", systemImage: "xmark.circle")
+                    }
+                    .sensoryFeedback(.selection, trigger: gyYanlisSayisi)
                     
                 } header: {
                     Text("Genel Yetenek")
+                        .bold()
                         .textCase(.none)
                 } footer: {
                     if(gyDogruSayisi + gyYanlisSayisi > 60){
@@ -41,16 +43,19 @@ struct OrtaogretimView: View {
                 }
                 
                 Section {
-                    Stepper("Doğru Sayısı: \(gkDogruSayisi, specifier: "%.0f")", value: $gkDogruSayisi, in: 1...60)
-                        .sensoryFeedback(.selection, trigger: gkDogruSayisi)
-                        .bold()
+                    Stepper(value: $gkDogruSayisi,in: 1...60) {
+                        Label("Doğru Sayısı: \(gkDogruSayisi, specifier: "%.0f")", systemImage: "checkmark.circle")
+                    }
+                    .sensoryFeedback(.selection, trigger: gkDogruSayisi)
                     
-                    Stepper("Yanlış Sayısı: \(gkYanlisSayisi, specifier: "%.0f")", value: $gkYanlisSayisi, in: 0...60)
-                        .sensoryFeedback(.selection, trigger: gkYanlisSayisi)
-                        .bold()
+                    Stepper(value: $gkYanlisSayisi,in: 1...60) {
+                        Label("Yanlış Sayısı: \(gkYanlisSayisi, specifier: "%.0f")", systemImage: "xmark.circle")
+                    }
+                    .sensoryFeedback(.selection, trigger: gkYanlisSayisi)
                     
                 } header: {
                     Text("Genel Kültür")
+                        .bold()
                         .textCase(.none)
                 } footer: {
                     if(gkDogruSayisi + gkYanlisSayisi > 60){
@@ -62,8 +67,6 @@ struct OrtaogretimView: View {
                 
                 Section {
                     Text("2022 KPSS Puanı: \(sonuc, specifier: "%.3f")")
-                        .bold()
-                    
                     HesaplaButton(title: "Hesapla") {
                         let gkNet = gkDogruSayisi - (gkYanlisSayisi / 4)
                         let gyNet = gyDogruSayisi - (gyYanlisSayisi / 4)
@@ -77,6 +80,7 @@ struct OrtaogretimView: View {
                     .sensoryFeedback(.success, trigger: sonuc)
                 } header: {
                     Text("Sonuç")
+                        .bold()
                         .textCase(.none)
                 }
             }

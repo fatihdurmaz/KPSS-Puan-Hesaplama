@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE02B15E2B6AE549003C5485 /* HesaplaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE02B15D2B6AE549003C5485 /* HesaplaButton.swift */; };
+		DE6A9BDE2B74199C009812BB /* SonucView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A9BDD2B74199C009812BB /* SonucView.swift */; };
 		DEBB88102B69914200DA8B6B /* KPSS_Puan_HesaplamaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB880F2B69914200DA8B6B /* KPSS_Puan_HesaplamaApp.swift */; };
 		DEBB88142B69914300DA8B6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEBB88132B69914300DA8B6B /* Assets.xcassets */; };
 		DEBB88172B69914300DA8B6B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEBB88162B69914300DA8B6B /* Preview Assets.xcassets */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		DE02B15D2B6AE549003C5485 /* HesaplaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HesaplaButton.swift; sourceTree = "<group>"; };
+		DE6A9BDD2B74199C009812BB /* SonucView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonucView.swift; sourceTree = "<group>"; };
 		DEBB880C2B69914200DA8B6B /* KPSS Puan Hesaplama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KPSS Puan Hesaplama.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBB880F2B69914200DA8B6B /* KPSS_Puan_HesaplamaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPSS_Puan_HesaplamaApp.swift; sourceTree = "<group>"; };
 		DEBB88132B69914300DA8B6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				DE02B15D2B6AE549003C5485 /* HesaplaButton.swift */,
+				DE6A9BDD2B74199C009812BB /* SonucView.swift */,
 			);
 			path = SharedViews;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				DEBB88102B69914200DA8B6B /* KPSS_Puan_HesaplamaApp.swift in Sources */,
 				DEBB882C2B69989100DA8B6B /* EgitimBilimleriView.swift in Sources */,
 				DEBB882E2B69989A00DA8B6B /* OABTView.swift in Sources */,
+				DE6A9BDE2B74199C009812BB /* SonucView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
