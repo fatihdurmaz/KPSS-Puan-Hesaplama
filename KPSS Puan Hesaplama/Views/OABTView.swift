@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct OABTView: View {
+    @Environment(\.modelContext) private var modelContext
+    
     @State private var gyDogruSayisi:Double = 30
     @State private var gyYanlisSayisi: Double = 0
     @State private var gkDogruSayisi: Double = 30
@@ -69,7 +71,6 @@ struct OABTView: View {
                 } header: {
                     Text("Genel Yetenek")
                         .bold()
-                        .foregroundStyle(.main)
                         .textCase(.none)
                 } footer: {
                     if(gyDogruSayisi + gyYanlisSayisi > 60){
@@ -92,7 +93,6 @@ struct OABTView: View {
                 } header: {
                     Text("Genel Kültür")
                         .bold()
-                        .foregroundStyle(.main)
                         .textCase(.none)
                 } footer: {
                     if(gkDogruSayisi + gkYanlisSayisi > 60){
@@ -115,7 +115,6 @@ struct OABTView: View {
                 } header: {
                     Text("Eğitim Bilimleri")
                         .bold()
-                        .foregroundStyle(.main)
                         .textCase(.none)
                 } footer: {
                     if(ebDogruSayisi + ebYanlisSayisi > 80){
@@ -127,10 +126,7 @@ struct OABTView: View {
                 Section {
                     Picker("Bölüm Seçiniz", selection: $selectedOption) {
                         ForEach(0..<options.count, id: \.self){ index in
-                            HStack {
-                                Image(systemName: "person.circle")
-                                Text(options[index].2)
-                            }                            
+                            Text(options[index].2)
                         }
                     }
                     .onChange(of: selectedOption) {
@@ -138,31 +134,34 @@ struct OABTView: View {
                         oabtPuan = options[selectedOption].1
                     }
                     
-                    
                     Stepper(value: $oabtDogruSayisi, in: 1...75){
                         Label("Doğru Sayısı: \(oabtDogruSayisi, specifier: "%.0f")", systemImage: "checkmark.circle")
                     }
-                        .sensoryFeedback(.selection, trigger: oabtDogruSayisi)
+                    .sensoryFeedback(.selection, trigger: oabtDogruSayisi)
                     
                     Stepper(value: $oabtYanlisSayisi, in: 0...75){
                         Label("Yanlış Sayısı: \(oabtYanlisSayisi, specifier: "%.0f")", systemImage: "xmark.circle")
                     }
-                        .sensoryFeedback(.selection, trigger: oabtYanlisSayisi)
+                    .sensoryFeedback(.selection, trigger: oabtYanlisSayisi)
                     HesaplaButton(title: "Hesapla") {
                         let gkNet = gkDogruSayisi - (gkYanlisSayisi / 4)
                         let gyNet = gyDogruSayisi - (gyYanlisSayisi / 4)
                         let ebNet = ebDogruSayisi - (ebYanlisSayisi / 4)
                         let oabtNet = oabtDogruSayisi - (oabtYanlisSayisi / 4)
                         
-                        sonuc2022     = 48.616 + gyNet * 0.4756 + gkNet * 0.4192
-                        sonucEB2022   = 36.812 + gyNet * 0.3985 + gkNet * 0.3512 + ebNet * 0.34714
-                        sonucOABT2022 = oabtPuan + gyNet * 0.1720 + gkNet * 0.1515 + ebNet * 0.1498 + oabtNet * oabtKatsayi
-                        sonuc2023 = 51.209 + gyNet * 0.537 + gkNet * 0.418
-                        sonucEB2023   = 40.405 + gyNet * 0.3493 + gkNet * 0.3672 + ebNet * 0.37145
+                        sonuc2022     = Constants.lisans2022Puan + gyNet * Constants.lisans2022GYKatsayi + gkNet * Constants.lisans2022GKKatsayi
+                        sonucEB2022   = Constants.eb2022Puan + gyNet * Constants.eb2022GYKatsayi + gkNet * Constants.eb2022GKKatsayi + ebNet * Constants.eb2022Katsayi
+                        sonucOABT2022 = oabtPuan + gyNet * Constants.oabt2022GYKatsayi + gkNet * Constants.oabt2022GKKatsayi + ebNet * Constants.oabt2022GKKatsayi + oabtNet * oabtKatsayi
+                        sonuc2023     = Constants.lisans2023Puan + gyNet * Constants.lisans2023GYKatsayi + gkNet * Constants.lisans2023GKKatsayi
+                        sonucEB2023   = Constants.eb2023Puan + gyNet * Constants.eb2023GYKatsayi + gkNet * Constants.eb2023GKKatsayi + ebNet * Constants.eb2023Katsayi
                         isShowingSheet.toggle()
+                        
+                        let result2022OABT = Result(sinavAdi: "2022 ÖABT", gyNet: gyNet, gkNet: gkNet, ebNet: ebNet, oabtNet: oabtNet, sonuc: sonuc2022)
+                        
+                        modelContext.insert(result2022OABT)
                     }
                     .disabled(formKonrol)
-                    .sensoryFeedback(.success, trigger: sonuc2022)
+                    .sensoryFeedback(.success, trigger: sonucOABT2022)
                     .sheet(isPresented: $isShowingSheet) {
                         SonucView(sonuc2022: sonuc2022, sonucEB2022: sonucEB2022, sonucOABT2022: sonucOABT2022, sonuc2023: sonuc2023, sonucEB2023: sonucEB2023, sonucOABT2023: nil)
                     }
@@ -170,7 +169,6 @@ struct OABTView: View {
                 } header: {
                     Text("ÖABT")
                         .bold()
-                        .foregroundStyle(.main)
                         .textCase(.none)
                 } footer: {
                     if(ebDogruSayisi + ebYanlisSayisi > 75){

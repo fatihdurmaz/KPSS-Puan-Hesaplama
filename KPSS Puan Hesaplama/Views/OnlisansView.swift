@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct OnlisansView: View {
+    @Environment(\.modelContext) private var modelContext
     
     @State private var gyDogruSayisi:Double = 30
     @State private var gyYanlisSayisi: Double = 0
     @State private var gkDogruSayisi: Double = 30
     @State private var gkYanlisSayisi: Double = 0
-    
     @State private var sonuc: Double = 0
     
     var body: some View {
@@ -34,7 +34,6 @@ struct OnlisansView: View {
                 } header: {
                     Text("Genel Yetenek")
                         .bold()
-                        .foregroundStyle(.main)
                         .textCase(.none)
                 } footer: {
                     if(gyDogruSayisi + gyYanlisSayisi > 60){
@@ -57,7 +56,6 @@ struct OnlisansView: View {
                 } header: {
                     Text("Genel Kültür")
                         .bold()
-                        .foregroundStyle(.main)
                         .textCase(.none)
                 } footer: {
                     if(gkDogruSayisi + gkYanlisSayisi > 60){
@@ -73,16 +71,16 @@ struct OnlisansView: View {
                         let gyNet = gyDogruSayisi - (gyYanlisSayisi / 4)
                         
                         withAnimation {
-                            sonuc = (53.816 + gyNet * 0.43 + gkNet * 0.397)
+                            sonuc = Constants.onlisansPuan + gyNet * Constants.onlisansGYKatsayi + gkNet * Constants.onlisansGKKatsayi
                         }
-                        
+                        let result = Result(sinavAdi: "2022 Önlisans KPSS", gyNet: gyNet, gkNet: gkNet, sonuc: sonuc)
+                        modelContext.insert(result)
                     }
                     .disabled(formKonrol)
                     .sensoryFeedback(.success, trigger: sonuc)
                 } header: {
                     Text("Sonuç")
                         .bold()
-                        .foregroundStyle(.main)
                         .textCase(.none)
                 }
             }

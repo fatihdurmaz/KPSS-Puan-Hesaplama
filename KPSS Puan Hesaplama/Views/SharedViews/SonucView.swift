@@ -33,7 +33,6 @@ struct SonucView: View {
                     } header: {
                         Text("2023 KPSS")
                             .bold()
-                            .foregroundStyle(.main)
                     }
                     
                     Section {
@@ -46,11 +45,11 @@ struct SonucView: View {
                     } header: {
                         Text("2022 KPSS")
                             .bold()
-                            .foregroundStyle(.main)
                     }
                 }
             }
             .navigationTitle("Sonuç")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem{
                     Button("Kapat", systemImage: "xmark") {

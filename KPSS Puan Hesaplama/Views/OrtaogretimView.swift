@@ -6,14 +6,16 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct OrtaogretimView: View {
+    
+    @Environment(\.modelContext) private var modelContext
     
     @State private var gyDogruSayisi:Double = 30
     @State private var gyYanlisSayisi: Double = 0
     @State private var gkDogruSayisi: Double = 30
     @State private var gkYanlisSayisi: Double = 0
-    
     @State private var sonuc: Double = 0
     
     var body: some View {
@@ -26,7 +28,7 @@ struct OrtaogretimView: View {
                     }                   
                     .sensoryFeedback(.selection, trigger: gyDogruSayisi)
                     
-                    Stepper(value: $gyYanlisSayisi,in: 1...60) {
+                    Stepper(value: $gyYanlisSayisi,in: 0...60) {
                         Label("Yanlış Sayısı: \(gyYanlisSayisi, specifier: "%.0f")", systemImage: "xmark.circle")
                     }
                     .sensoryFeedback(.selection, trigger: gyYanlisSayisi)
@@ -48,7 +50,7 @@ struct OrtaogretimView: View {
                     }
                     .sensoryFeedback(.selection, trigger: gkDogruSayisi)
                     
-                    Stepper(value: $gkYanlisSayisi,in: 1...60) {
+                    Stepper(value: $gkYanlisSayisi,in: 0...60) {
                         Label("Yanlış Sayısı: \(gkYanlisSayisi, specifier: "%.0f")", systemImage: "xmark.circle")
                     }
                     .sensoryFeedback(.selection, trigger: gkYanlisSayisi)
@@ -61,7 +63,6 @@ struct OrtaogretimView: View {
                     if(gkDogruSayisi + gkYanlisSayisi > 60){
                         Text("Toplam doğru ve yanlış sayıları 60'ı geçemez.")
                             .foregroundStyle(.red)
-                            .transition(/*@START_MENU_TOKEN@*/.identity/*@END_MENU_TOKEN@*/)
                     }
                 }
                 
@@ -72,8 +73,10 @@ struct OrtaogretimView: View {
                         let gyNet = gyDogruSayisi - (gyYanlisSayisi / 4)
                         
                         withAnimation {
-                            sonuc = 55.839 + gyNet * 0.348 + gkNet * 0.431
+                            sonuc = Constants.ortaogretimPuan + gyNet * Constants.ortaogretimGYKatsayi + gkNet * Constants.ortaogretimGKKatsayi
                         }
+                        let result = Result(sinavAdi: "2022 Ortaöğretim KPSS", gyNet: gyNet, gkNet: gkNet, sonuc: sonuc)
+                        modelContext.insert(result)
                         
                     }
                     .disabled(formKonrol)

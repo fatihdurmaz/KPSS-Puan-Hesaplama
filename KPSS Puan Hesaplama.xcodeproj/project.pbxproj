@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DE02B15E2B6AE549003C5485 /* HesaplaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE02B15D2B6AE549003C5485 /* HesaplaButton.swift */; };
+		DE45D8772B7AAD06001DDED5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45D8762B7AAD06001DDED5 /* Result.swift */; };
 		DE6A9BDE2B74199C009812BB /* SonucView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A9BDD2B74199C009812BB /* SonucView.swift */; };
+		DE9680242B74C9F10072953A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9680232B74C9F10072953A /* Constants.swift */; };
 		DEBB88102B69914200DA8B6B /* KPSS_Puan_HesaplamaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB880F2B69914200DA8B6B /* KPSS_Puan_HesaplamaApp.swift */; };
 		DEBB88142B69914300DA8B6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEBB88132B69914300DA8B6B /* Assets.xcassets */; };
 		DEBB88172B69914300DA8B6B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEBB88162B69914300DA8B6B /* Preview Assets.xcassets */; };
@@ -24,7 +26,9 @@
 
 /* Begin PBXFileReference section */
 		DE02B15D2B6AE549003C5485 /* HesaplaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HesaplaButton.swift; sourceTree = "<group>"; };
+		DE45D8762B7AAD06001DDED5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		DE6A9BDD2B74199C009812BB /* SonucView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonucView.swift; sourceTree = "<group>"; };
+		DE9680232B74C9F10072953A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DEBB880C2B69914200DA8B6B /* KPSS Puan Hesaplama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KPSS Puan Hesaplama.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBB880F2B69914200DA8B6B /* KPSS_Puan_HesaplamaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPSS_Puan_HesaplamaApp.swift; sourceTree = "<group>"; };
 		DEBB88132B69914300DA8B6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +63,22 @@
 			path = SharedViews;
 			sourceTree = "<group>";
 		};
+		DE45D8752B7AACF4001DDED5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE45D8762B7AAD06001DDED5 /* Result.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE9680252B74CE3D0072953A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DE9680232B74C9F10072953A /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		DEBB88032B69914200DA8B6B = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +98,7 @@
 		DEBB880E2B69914200DA8B6B /* KPSS Puan Hesaplama */ = {
 			isa = PBXGroup;
 			children = (
+				DE45D8752B7AACF4001DDED5 /* Model */,
 				DEBB88202B6992B500DA8B6B /* Resources */,
 				DEBB881F2B6992AD00DA8B6B /* Views */,
 				DEBB88152B69914300DA8B6B /* Preview Content */,
@@ -99,6 +120,7 @@
 				DEBB881D2B69926C00DA8B6B /* RootView.swift */,
 				DE02B15C2B6AE52E003C5485 /* SharedViews */,
 				DEBB88212B6992D700DA8B6B /* MainView.swift */,
+				DE9680252B74CE3D0072953A /* Helpers */,
 				DEBB88232B6992EA00DA8B6B /* ResultView.swift */,
 				DEBB88252B69987400DA8B6B /* OrtaogretimView.swift */,
 				DEBB88272B69987F00DA8B6B /* OnlisansView.swift */,
@@ -193,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE02B15E2B6AE549003C5485 /* HesaplaButton.swift in Sources */,
+				DE45D8772B7AAD06001DDED5 /* Result.swift in Sources */,
 				DEBB882A2B69988600DA8B6B /* LisansView.swift in Sources */,
 				DEBB881E2B69926C00DA8B6B /* RootView.swift in Sources */,
 				DEBB88262B69987400DA8B6B /* OrtaogretimView.swift in Sources */,
@@ -203,6 +226,7 @@
 				DEBB882C2B69989100DA8B6B /* EgitimBilimleriView.swift in Sources */,
 				DEBB882E2B69989A00DA8B6B /* OABTView.swift in Sources */,
 				DE6A9BDE2B74199C009812BB /* SonucView.swift in Sources */,
+				DE9680242B74C9F10072953A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

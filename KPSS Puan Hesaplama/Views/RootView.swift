@@ -19,15 +19,16 @@ struct RootView: View {
                 }
                 .tag(0)
             
-            ResultView()
+            ResultView(selectionTabItem: $selectionItem)
                 .tabItem {
                     Label("Hesaplamalar", systemImage: "arrow.counterclockwise.circle")
                         .environment(\.symbolVariants, selectionItem == 1 ? .fill : .none)
                     
                 }
                 .tag(1)
+            
         }
-        .tint(.black)
+        .tint(.main)
     }
 }
 
