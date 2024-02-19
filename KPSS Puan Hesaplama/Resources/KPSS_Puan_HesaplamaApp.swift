@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import GoogleMobileAds
 
 @main
 struct KPSS_Puan_HesaplamaApp: App {
@@ -22,6 +23,11 @@ struct KPSS_Puan_HesaplamaApp: App {
         appearanceTab.configureWithOpaqueBackground()
         UITabBar.appearance().scrollEdgeAppearance = appearanceTab
         UITabBar.appearance().standardAppearance = appearanceTab
+        
+        // Admob SDK 
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+
+        
     }
     
     var body: some Scene {
