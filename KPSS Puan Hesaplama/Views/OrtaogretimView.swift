@@ -18,8 +18,8 @@ struct OrtaogretimView: View {
     @State private var gkYanlisSayisi: Double = 0
     @State private var sonuc: Double = 0
     
-    let adCoordinator = AdCoordinator()
-    
+    private let adCoordinator = AdCoordinator()
+
     init() {
         adCoordinator.loadAd()
     }
