@@ -10,6 +10,8 @@ import GoogleMobileAds
 
 struct MainView: View {
     
+    @State private var viewModel = CalculateViewModel()
+
     var width: CGFloat = UIScreen.main.bounds.width
     var size: CGSize {
         return GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(width).size
@@ -103,10 +105,16 @@ struct MainView: View {
                     }
                     
                 }
-                BannerView()
-                    .frame(height: size.height)
+                if viewModel.openCount > 5 {
+                    BannerView()
+                        .frame(height: size.height)
+                }
             }
             .navigationTitle("KPSS Puan Hesaplama")
+            .onAppear{
+                print(viewModel.openCount)
+                viewModel.openCount += 1
+            }
         }
     }
 }

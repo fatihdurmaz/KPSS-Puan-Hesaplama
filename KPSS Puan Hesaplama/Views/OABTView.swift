@@ -53,6 +53,9 @@ struct OABTView: View {
     
     @State private var isShowingSheet = false
     
+    private let adCoordinator = AdCoordinator()
+    @State private var viewModel = CalculateViewModel()
+    
     var body: some View {
         VStack {
             
@@ -156,9 +159,15 @@ struct OABTView: View {
                         sonucEB2023   = Constants.eb2023Puan + gyNet * Constants.eb2023GYKatsayi + gkNet * Constants.eb2023GKKatsayi + ebNet * Constants.eb2023Katsayi
                         isShowingSheet.toggle()
                         
+                        // SwiftData
                         let result2022OABT = Result(sinavAdi: "2022 ÖABT", gyNet: gyNet, gkNet: gkNet, ebNet: ebNet, oabtNet: oabtNet, sonuc: sonuc2022)
-                        
                         modelContext.insert(result2022OABT)
+                        
+                        // Admob
+                        if viewModel.calculateCount % 15 == 0{
+                            adCoordinator.presentAd()
+                        }
+                        viewModel.calculateCount += 1
                     }
                     .disabled(formKonrol)
                     .sensoryFeedback(.success, trigger: sonucOABT2022)

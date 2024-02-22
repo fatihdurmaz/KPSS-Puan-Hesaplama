@@ -19,7 +19,6 @@ struct OrtaogretimView: View {
     @State private var sonuc: Double = 0
     
     private let adCoordinator = AdCoordinator()
-    
     @State private var viewModel = CalculateViewModel()
     
     var body: some View {
@@ -88,7 +87,6 @@ struct OrtaogretimView: View {
                         if viewModel.calculateCount % 15 == 0{
                             adCoordinator.presentAd()
                         }
-                        
                         viewModel.calculateCount += 1
                         
                     }

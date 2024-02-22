@@ -17,6 +17,9 @@ struct LisansView: View {
     @State private var sonuc2022: Double = 0
     @State private var sonuc2023: Double = 0
     
+    private let adCoordinator = AdCoordinator()
+    @State private var viewModel = CalculateViewModel()
+    
     var body: some View {
         VStack {
             
@@ -77,10 +80,17 @@ struct LisansView: View {
                             sonuc2022 = Constants.lisans2022Puan + gyNet * Constants.lisans2022GYKatsayi + gkNet * Constants.lisans2022GKKatsayi
                         }
                         
+                        // SwiftData
                         let result2022 = Result(sinavAdi: "2022 Lisans KPSS", gyNet: gyNet, gkNet: gkNet, sonuc: sonuc2022)
                         let result2023 = Result(sinavAdi: "2023 Lisans KPSS", gyNet: gyNet, gkNet: gkNet, sonuc: sonuc2023)
                         modelContext.insert(result2022)
                         modelContext.insert(result2023)
+                        
+                        // Admob
+                        if viewModel.calculateCount % 15 == 0{
+                            adCoordinator.presentAd()
+                        }
+                        viewModel.calculateCount += 1
                     }
                     .disabled(formKonrol)
                     .sensoryFeedback(.success, trigger: sonuc2022)

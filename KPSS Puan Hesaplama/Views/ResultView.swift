@@ -78,9 +78,12 @@ struct ResultView: View {
                     if results.isEmpty {
                         ContentUnavailableView {
                             Label("Sonuç Bulunamadı", systemImage: "magnifyingglass")
+                                .labelStyle(.titleOnly)
                         } description: {
                             VStack {
                                 Text("Puan hesaplamaya başlamak için lütfen başlangıç sekmesini kullanın.")
+                                    .italic()
+                                
                                 LottieView(animation: .named("notfound"))
                                     .looping()
                                     .frame(width: 250, height: 250)
@@ -93,6 +96,7 @@ struct ResultView: View {
                                 selectionTabItem = 0
                             }
                             .bold()
+                            .font(.title3)
                         }
                         
                     }

@@ -16,6 +16,9 @@ struct OnlisansView: View {
     @State private var gkYanlisSayisi: Double = 0
     @State private var sonuc: Double = 0
     
+    private let adCoordinator = AdCoordinator()
+    @State private var viewModel = CalculateViewModel()
+    
     var body: some View {
         VStack {
             
@@ -73,8 +76,16 @@ struct OnlisansView: View {
                         withAnimation {
                             sonuc = Constants.onlisansPuan + gyNet * Constants.onlisansGYKatsayi + gkNet * Constants.onlisansGKKatsayi
                         }
+                        
+                        //  SwiftData
                         let result = Result(sinavAdi: "2022 Önlisans KPSS", gyNet: gyNet, gkNet: gkNet, sonuc: sonuc)
                         modelContext.insert(result)
+                        
+                        // Admob
+                        if viewModel.calculateCount % 15 == 0{
+                            adCoordinator.presentAd()
+                        }
+                        viewModel.calculateCount += 1
                     }
                     .disabled(formKonrol)
                     .sensoryFeedback(.success, trigger: sonuc)

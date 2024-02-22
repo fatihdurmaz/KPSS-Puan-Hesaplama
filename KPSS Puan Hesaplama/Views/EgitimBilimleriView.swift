@@ -23,6 +23,9 @@ struct EgitimBilimleriView: View {
     @State private var sonucEB2023: Double = 0
     @State private var isShowingSheet = false
     
+    private let adCoordinator = AdCoordinator()
+    @State private var viewModel = CalculateViewModel()
+    
     var body: some View {
         VStack {
             
@@ -81,11 +84,19 @@ struct EgitimBilimleriView: View {
                         sonuc2023     = Constants.lisans2023Puan + gyNet * Constants.lisans2023GYKatsayi + gkNet * Constants.lisans2023GKKatsayi
                         
                         isShowingSheet.toggle()
+                        
+                        // SwiftData
                         let result2022EB = Result(sinavAdi: "2022 Eğitim Bilimleri", gyNet: gyNet, gkNet: gkNet, ebNet: ebNet, sonuc: sonucEB2022)
                         let result2023EB = Result(sinavAdi: "2023 Eğitim Bilimleri", gyNet: gyNet, gkNet: gkNet, ebNet: ebNet, sonuc: sonucEB2023)
                         
                         modelContext.insert(result2022EB)
                         modelContext.insert(result2023EB)
+                        
+                        // Admob
+                        if viewModel.calculateCount % 15 == 0{
+                            adCoordinator.presentAd()
+                        }
+                        viewModel.calculateCount += 1
                         
                     }
                     .disabled(formKonrol)
@@ -97,7 +108,6 @@ struct EgitimBilimleriView: View {
                 } header: {
                     Text("Eğitim Bilimleri")
                         .bold()
-                        .foregroundStyle(.main)
                         .textCase(.none)
                 } footer: {
                     if(ebDogruSayisi + ebYanlisSayisi > 80){
