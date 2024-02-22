@@ -8,12 +8,12 @@
 import SwiftUI
 import SwiftData
 import GoogleMobileAds
+import StoreKit
 
 @main
 struct KPSS_Puan_HesaplamaApp: App {
     
     init() {
-        
         let appearanceNav = UINavigationBarAppearance()
         appearanceNav.configureWithOpaqueBackground()
         UINavigationBar.appearance().standardAppearance = appearanceNav
@@ -24,9 +24,9 @@ struct KPSS_Puan_HesaplamaApp: App {
         UITabBar.appearance().scrollEdgeAppearance = appearanceTab
         UITabBar.appearance().standardAppearance = appearanceTab
         
-        // Admob SDK 
+        // Admob SDK
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "c458ae01182d2fad3701091c1e7991e0" ]
         GADMobileAds.sharedInstance().start(completionHandler: nil)
-
         
     }
     
@@ -35,5 +35,6 @@ struct KPSS_Puan_HesaplamaApp: App {
             RootView()
         }
         .modelContainer(for:Result.self)
+        
     }
 }

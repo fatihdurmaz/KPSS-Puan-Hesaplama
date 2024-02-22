@@ -9,6 +9,12 @@ import SwiftUI
 import GoogleMobileAds
 
 struct MainView: View {
+    
+    var width: CGFloat = UIScreen.main.bounds.width
+    var size: CGSize {
+        return GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(width).size
+    }
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -98,7 +104,7 @@ struct MainView: View {
                     
                 }
                 BannerView()
-                    .frame(width: GADAdSizeBanner.size.width, height: GADAdSizeBanner.size.height)
+                    .frame(height: size.height)
             }
             .navigationTitle("KPSS Puan Hesaplama")
         }

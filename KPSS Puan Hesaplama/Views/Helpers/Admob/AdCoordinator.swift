@@ -8,27 +8,66 @@
 import Foundation
 import GoogleMobileAds
 
-class AdCoordinator: NSObject {
-  private var ad: GADInterstitialAd?
-
-  func loadAd() {
-    GADInterstitialAd.load(
-      withAdUnitID: "ca-app-pub-1120973806156714/4988196622", request: GADRequest()
-    ) { ad, error in
-      if let error = error {
-        return print("Failed to load ad with error: \(error.localizedDescription)")
-      }
-
-      self.ad = ad
+class AdCoordinator: NSObject,GADFullScreenContentDelegate {
+    private var ad: GADInterstitialAd?
+    
+    override init() {
+        super.init()
+        loadAd()
     }
-  }
+    
+    
+    
+    func loadAd() {
+        let request = GADRequest()
+        request.scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        GADInterstitialAd.load(
+            withAdUnitID: Constants.interstitialUnitID, request: request
+        ) { ad, error in
+            if let error = error {
+                return print("Failed to load ad with error: \(error.localizedDescription)")
+            }
+            
+            self.ad = ad
+            self.ad?.fullScreenContentDelegate = self
+            
+        }
+    }
+    
+    func presentAd() {
+        guard let fullScreenAd = ad else {
+            return print("Ad wasn't ready")
+        }
+        
+        // View controller is an optional parameter. Pass in nil.
+        fullScreenAd.present(fromRootViewController: nil)
+    }
+    
+    // MARK: - GADFullScreenContentDelegate methods
 
-  func presentAd() {
-    guard let fullScreenAd = ad else {
-      return print("Ad wasn't ready")
+    func adDidRecordImpression(_ ad: GADFullScreenPresentingAd) {
+      print("\(#function) called")
     }
 
-    // View controller is an optional parameter. Pass in nil.
-    fullScreenAd.present(fromRootViewController: nil)
-  }
+    func adDidRecordClick(_ ad: GADFullScreenPresentingAd) {
+      print("\(#function) called")
+    }
+
+    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+      print("\(#function) called")
+    }
+
+    func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+      print("\(#function) called")
+    }
+
+
+    func adWillDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+      print("\(#function) called")
+    }
+
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+      print("\(#function) called")
+        loadAd()
+    }
 }

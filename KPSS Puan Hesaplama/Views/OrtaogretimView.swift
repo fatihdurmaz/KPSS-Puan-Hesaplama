@@ -19,11 +19,9 @@ struct OrtaogretimView: View {
     @State private var sonuc: Double = 0
     
     private let adCoordinator = AdCoordinator()
-
-    init() {
-        adCoordinator.loadAd()
-    }
-
+    
+    @State private var viewModel = CalculateViewModel()
+    
     var body: some View {
         VStack {
             
@@ -31,7 +29,7 @@ struct OrtaogretimView: View {
                 Section {
                     Stepper(value: $gyDogruSayisi,in: 1...60) {
                         Label("Doğru Sayısı: \(gyDogruSayisi, specifier: "%.0f")", systemImage: "checkmark.circle")
-                    }                   
+                    }
                     .sensoryFeedback(.selection, trigger: gyDogruSayisi)
                     
                     Stepper(value: $gyYanlisSayisi,in: 0...60) {
@@ -87,7 +85,12 @@ struct OrtaogretimView: View {
                         modelContext.insert(result)
                         
                         // Admob
-                        adCoordinator.presentAd()
+                        if viewModel.calculateCount % 15 == 0{
+                            adCoordinator.presentAd()
+                        }
+                        
+                        viewModel.calculateCount += 1
+                        
                     }
                     .disabled(formKonrol)
                     .sensoryFeedback(.success, trigger: sonuc)
