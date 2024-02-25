@@ -14,4 +14,5 @@ class CalculateViewModel {
     
     @ObservationIgnored @AppStorage("calculateCount") var calculateCount = 1
     @ObservationIgnored @AppStorage("openCount") var openCount = 0
+
 }

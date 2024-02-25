@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		DE02B15E2B6AE549003C5485 /* HesaplaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE02B15D2B6AE549003C5485 /* HesaplaButton.swift */; };
 		DE45D8772B7AAD06001DDED5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45D8762B7AAD06001DDED5 /* Result.swift */; };
+		DE4875FE2B8BD4D60074D4F1 /* UIOnboarding in Frameworks */ = {isa = PBXBuildFile; productRef = DE4875FD2B8BD4D60074D4F1 /* UIOnboarding */; };
+		DE4876022B8BD62F0074D4F1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4876012B8BD62F0074D4F1 /* OnboardingView.swift */; };
+		DE4876042B8BD64F0074D4F1 /* UIOnboardingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4876032B8BD64F0074D4F1 /* UIOnboardingHelper.swift */; };
 		DE6A6E952B83F2B000DCBBAD /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = DE6A6E942B83F2B000DCBBAD /* GoogleMobileAds */; };
 		DE6A6E992B83F3A400DCBBAD /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A6E982B83F3A400DCBBAD /* BannerViewController.swift */; };
 		DE6A6E9B2B83F3F000DCBBAD /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A6E9A2B83F3EF00DCBBAD /* BannerView.swift */; };
 		DE6A6E9D2B83F57D00DCBBAD /* AdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A6E9C2B83F57D00DCBBAD /* AdCoordinator.swift */; };
 		DE6A9BDE2B74199C009812BB /* SonucView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A9BDD2B74199C009812BB /* SonucView.swift */; };
+		DE8E33EF2B8A7EA9005CF00C /* UIOnboarding in Frameworks */ = {isa = PBXBuildFile; productRef = DE8E33EE2B8A7EA9005CF00C /* UIOnboarding */; };
 		DE9680242B74C9F10072953A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9680232B74C9F10072953A /* Constants.swift */; };
 		DEBB88102B69914200DA8B6B /* KPSS_Puan_HesaplamaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB880F2B69914200DA8B6B /* KPSS_Puan_HesaplamaApp.swift */; };
 		DEBB88142B69914300DA8B6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEBB88132B69914300DA8B6B /* Assets.xcassets */; };
@@ -34,6 +38,8 @@
 /* Begin PBXFileReference section */
 		DE02B15D2B6AE549003C5485 /* HesaplaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HesaplaButton.swift; sourceTree = "<group>"; };
 		DE45D8762B7AAD06001DDED5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		DE4876012B8BD62F0074D4F1 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		DE4876032B8BD64F0074D4F1 /* UIOnboardingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIOnboardingHelper.swift; sourceTree = "<group>"; };
 		DE6A6E962B83F2F000DCBBAD /* KPSS-Puan-Hesaplama-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "KPSS-Puan-Hesaplama-Info.plist"; sourceTree = SOURCE_ROOT; };
 		DE6A6E982B83F3A400DCBBAD /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
 		DE6A6E9A2B83F3EF00DCBBAD /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
@@ -62,6 +68,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE6A6E952B83F2B000DCBBAD /* GoogleMobileAds in Frameworks */,
+				DE4875FE2B8BD4D60074D4F1 /* UIOnboarding in Frameworks */,
+				DE8E33EF2B8A7EA9005CF00C /* UIOnboarding in Frameworks */,
 				DEC53F0E2B87D65400C6B476 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +109,8 @@
 			children = (
 				DE6A6E972B83F39600DCBBAD /* Admob */,
 				DE9680232B74C9F10072953A /* Constants.swift */,
+				DE4876012B8BD62F0074D4F1 /* OnboardingView.swift */,
+				DE4876032B8BD64F0074D4F1 /* UIOnboardingHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -128,6 +138,7 @@
 				DE45D8752B7AACF4001DDED5 /* Model */,
 				DEBB881F2B6992AD00DA8B6B /* Views */,
 				DEC53F092B87D3C400C6B476 /* ViewModel */,
+				DE9680252B74CE3D0072953A /* Helpers */,
 				DEBB88202B6992B500DA8B6B /* Resources */,
 				DEBB88152B69914300DA8B6B /* Preview Content */,
 			);
@@ -148,7 +159,6 @@
 				DEBB881D2B69926C00DA8B6B /* RootView.swift */,
 				DE02B15C2B6AE52E003C5485 /* SharedViews */,
 				DEBB88212B6992D700DA8B6B /* MainView.swift */,
-				DE9680252B74CE3D0072953A /* Helpers */,
 				DEBB88232B6992EA00DA8B6B /* ResultView.swift */,
 				DEBB88252B69987400DA8B6B /* OrtaogretimView.swift */,
 				DEBB88272B69987F00DA8B6B /* OnlisansView.swift */,
@@ -196,6 +206,8 @@
 			packageProductDependencies = (
 				DE6A6E942B83F2B000DCBBAD /* GoogleMobileAds */,
 				DEC53F0D2B87D65400C6B476 /* Lottie */,
+				DE8E33EE2B8A7EA9005CF00C /* UIOnboarding */,
+				DE4875FD2B8BD4D60074D4F1 /* UIOnboarding */,
 			);
 			productName = "KPSS Puan Hesaplama";
 			productReference = DEBB880C2B69914200DA8B6B /* KPSS Puan Hesaplama.app */;
@@ -228,6 +240,7 @@
 			packageReferences = (
 				DE6A6E932B83F2B000DCBBAD /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 				DEC53F0C2B87D65400C6B476 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				DE8E33ED2B8A7EA9005CF00C /* XCRemoteSwiftPackageReference "UIOnboarding" */,
 			);
 			productRefGroup = DEBB880D2B69914200DA8B6B /* Products */;
 			projectDirPath = "";
@@ -258,6 +271,7 @@
 			files = (
 				DE02B15E2B6AE549003C5485 /* HesaplaButton.swift in Sources */,
 				DE45D8772B7AAD06001DDED5 /* Result.swift in Sources */,
+				DE4876022B8BD62F0074D4F1 /* OnboardingView.swift in Sources */,
 				DEBB882A2B69988600DA8B6B /* LisansView.swift in Sources */,
 				DEC53F0B2B87D3DA00C6B476 /* CalculateViewModel.swift in Sources */,
 				DEBB881E2B69926C00DA8B6B /* RootView.swift in Sources */,
@@ -265,6 +279,7 @@
 				DE6A6E9B2B83F3F000DCBBAD /* BannerView.swift in Sources */,
 				DEBB88242B6992EA00DA8B6B /* ResultView.swift in Sources */,
 				DE6A6E9D2B83F57D00DCBBAD /* AdCoordinator.swift in Sources */,
+				DE4876042B8BD64F0074D4F1 /* UIOnboardingHelper.swift in Sources */,
 				DE6A6E992B83F3A400DCBBAD /* BannerViewController.swift in Sources */,
 				DEBB88282B69987F00DA8B6B /* OnlisansView.swift in Sources */,
 				DEBB88222B6992D700DA8B6B /* MainView.swift in Sources */,
@@ -412,7 +427,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "KPSS-Puan-Hesaplama-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Puan Hesaplama";
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Reklamları sizin için daha kişiselleştirilir hale getirebilmemize izin verir misiniz?";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Bu tanımlayıcı size kişiselleştirilmiş reklamlar sunmak için kullanılacaktır.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -447,7 +462,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "KPSS-Puan-Hesaplama-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Puan Hesaplama";
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Reklamları sizin için daha kişiselleştirilir hale getirebilmemize izin verir misiniz?";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Bu tanımlayıcı size kişiselleştirilmiş reklamlar sunmak için kullanılacaktır.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -500,6 +515,14 @@
 				minimumVersion = 11.0.1;
 			};
 		};
+		DE8E33ED2B8A7EA9005CF00C /* XCRemoteSwiftPackageReference "UIOnboarding" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lascic/UIOnboarding";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.3;
+			};
+		};
 		DEC53F0C2B87D65400C6B476 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
@@ -511,10 +534,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DE4875FD2B8BD4D60074D4F1 /* UIOnboarding */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIOnboarding;
+		};
 		DE6A6E942B83F2B000DCBBAD /* GoogleMobileAds */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DE6A6E932B83F2B000DCBBAD /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
 			productName = GoogleMobileAds;
+		};
+		DE8E33EE2B8A7EA9005CF00C /* UIOnboarding */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE8E33ED2B8A7EA9005CF00C /* XCRemoteSwiftPackageReference "UIOnboarding" */;
+			productName = UIOnboarding;
 		};
 		DEC53F0D2B87D65400C6B476 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;

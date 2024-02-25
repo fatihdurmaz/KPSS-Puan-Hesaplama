@@ -75,30 +75,32 @@ struct ResultView: View {
                     
                 }
                 .overlay{
-                    if results.isEmpty {
-                        ContentUnavailableView {
-                            Label("Sonuç Bulunamadı", systemImage: "magnifyingglass")
-                                .labelStyle(.titleOnly)
-                        } description: {
-                            VStack {
-                                Text("Puan hesaplamaya başlamak için lütfen başlangıç sekmesini kullanın.")
-                                    .italic()
+                    GeometryReader { geo in
+                        if results.isEmpty {
+                            ContentUnavailableView {
+                                Label("Sonuç Bulunamadı", systemImage: "magnifyingglass")
+                                    .labelStyle(.titleOnly)
+                            } description: {
+                                VStack {
+                                    Text("Puan hesaplamaya başlamak için lütfen başlangıç sekmesini kullanın.")
+                                        .italic()
+                                    
+                                    LottieView(animation: .named("notfound"))
+                                        .looping()
+                                        .frame(height: geo.size.height * 0.5)
+                                        .shadow(radius: 10)
+                                    
+                                }
                                 
-                                LottieView(animation: .named("notfound"))
-                                    .looping()
-                                    .frame(width: 250, height: 250)
-                                    .shadow(radius: 10)
-                                
+                            } actions: {
+                                Button("KPSS Puan Hesaplaması Yap"){
+                                    selectionTabItem = 0
+                                }
+                                .bold()
+                                .font(.title3)
                             }
                             
-                        } actions: {
-                            Button("KPSS Puan Hesaplaması Yap"){
-                                selectionTabItem = 0
-                            }
-                            .bold()
-                            .font(.title3)
                         }
-                        
                     }
                 }
                 
