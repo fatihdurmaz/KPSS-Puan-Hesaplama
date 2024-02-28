@@ -18,8 +18,8 @@ struct OrtaogretimView: View {
     @State private var gkYanlisSayisi: Double = 0
     @State private var sonuc: Double = 0
     
-    private let adCoordinator = AdCoordinator()
-    @State private var viewModel = CalculateViewModel()
+    private let adCoordinator = AdCoordinator.shared
+    @State private var adsManager = AdsManager()
     
     var body: some View {
         VStack {
@@ -84,10 +84,10 @@ struct OrtaogretimView: View {
                         modelContext.insert(result)
                         
                         // Admob
-                        if viewModel.calculateCount % 15 == 0{
+                        if adsManager.shouldShowInterstitialAd(){
                             adCoordinator.presentAd()
                         }
-                        viewModel.calculateCount += 1
+                        adsManager.increaseInterstitialAdCounter()
                         
                     }
                     .disabled(formKonrol)

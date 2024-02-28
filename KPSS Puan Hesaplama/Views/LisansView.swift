@@ -17,9 +17,8 @@ struct LisansView: View {
     @State private var sonuc2022: Double = 0
     @State private var sonuc2023: Double = 0
     
-    private let adCoordinator = AdCoordinator()
-    @State private var viewModel = CalculateViewModel()
-    
+    private let adCoordinator = AdCoordinator.shared
+
     var body: some View {
         VStack {
             
@@ -87,10 +86,6 @@ struct LisansView: View {
                         modelContext.insert(result2023)
                         
                         // Admob
-                        if viewModel.calculateCount % 15 == 0{
-                            adCoordinator.presentAd()
-                        }
-                        viewModel.calculateCount += 1
                     }
                     .disabled(formKonrol)
                     .sensoryFeedback(.success, trigger: sonuc2022)

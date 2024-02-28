@@ -9,6 +9,9 @@ import Foundation
 import GoogleMobileAds
 
 class AdCoordinator: NSObject,GADFullScreenContentDelegate {
+    
+    static let shared = AdCoordinator()
+    
     private var ad: GADInterstitialAd?
     
     override init() {
@@ -22,7 +25,7 @@ class AdCoordinator: NSObject,GADFullScreenContentDelegate {
         let request = GADRequest()
         request.scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
         GADInterstitialAd.load(
-            withAdUnitID: Constants.interstitialUnitID, request: request
+            withAdUnitID: Constants.interstitialUnitIDTest, request: request
         ) { ad, error in
             if let error = error {
                 return print("Failed to load ad with error: \(error.localizedDescription)")

@@ -16,7 +16,7 @@ struct UIOnboardingHelper {
     // First Title Line
     // Welcome Text
     static func setUpFirstTitleLine() -> NSMutableAttributedString {
-        .init(string: "KPSS", attributes: [.foregroundColor: UIColor.label])
+        .init(string: "Merhaba", attributes: [.foregroundColor: UIColor.label])
     }
     
     // Second Title Line

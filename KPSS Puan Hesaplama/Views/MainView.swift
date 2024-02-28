@@ -8,15 +8,16 @@
 import SwiftUI
 import GoogleMobileAds
 
-struct MainView: View {
-    
-    @State private var viewModel = CalculateViewModel()
 
+struct MainView: View {
+    @Binding var selectionTabItem: Int
+    @State private var adsManager = AdsManager()
+    
     var width: CGFloat = UIScreen.main.bounds.width
     var size: CGSize {
         return GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(width).size
     }
-    
+
     var body: some View {
         NavigationStack {
             VStack {
@@ -105,20 +106,19 @@ struct MainView: View {
                     }
                     
                 }
-                if viewModel.openCount > 5 {
-                    BannerView()
-                        .frame(height: size.height)
+                if adsManager.shouldShowBannerAd() {
+                    if selectionTabItem == 0 {
+                        BannerView()
+                            .frame(height: size.height)
+                    }
+                    
                 }
             }
             .navigationTitle("KPSS Puan Hesaplama")
-            .onAppear{
-                print(viewModel.openCount)
-                viewModel.openCount += 1
-            }
         }
     }
 }
 
 #Preview {
-    MainView()
+    MainView(selectionTabItem: .constant(0))
 }

@@ -9,12 +9,14 @@ import SwiftUI
 import AppTrackingTransparency
 
 struct RootView: View {
+    @AppStorage("showingOnboarding") private var showingOnboarding = true
+    @State var adsManager = AdsManager()
     @State private var selectionItem = 0
-    @AppStorage("$showingOnboarding") private var showingOnboarding = true
+
 
     var body: some View {
         TabView(selection: $selectionItem){
-            MainView()
+            MainView(selectionTabItem: $selectionItem)
                 .tabItem {
                     Label("Başlangıç", systemImage: "house")
                         .environment(\.symbolVariants, selectionItem == 0 ? .fill : .none)
@@ -23,7 +25,7 @@ struct RootView: View {
             
             ResultView(selectionTabItem: $selectionItem)
                 .tabItem {
-                    Label("Hesaplamalar", systemImage: "arrow.counterclockwise.circle")
+                    Label("Hesaplamalar", systemImage:     "arrow.counterclockwise.circle")
                         .environment(\.symbolVariants, selectionItem == 1 ? .fill : .none)
                 }
                 .tag(1)
@@ -36,6 +38,9 @@ struct RootView: View {
                     ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in })
                 }
         })
+        .onAppear{
+            adsManager.increaseBannerAdCounter()
+        }
         .tint(.main)
     }
 }

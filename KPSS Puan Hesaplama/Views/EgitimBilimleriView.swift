@@ -23,9 +23,8 @@ struct EgitimBilimleriView: View {
     @State private var sonucEB2023: Double = 0
     @State private var isShowingSheet = false
     
-    private let adCoordinator = AdCoordinator()
-    @State private var viewModel = CalculateViewModel()
-    
+    private let adCoordinator = AdCoordinator.shared
+
     var body: some View {
         VStack {
             
@@ -93,10 +92,6 @@ struct EgitimBilimleriView: View {
                         modelContext.insert(result2023EB)
                         
                         // Admob
-                        if viewModel.calculateCount % 15 == 0{
-                            adCoordinator.presentAd()
-                        }
-                        viewModel.calculateCount += 1
                         
                     }
                     .disabled(formKonrol)

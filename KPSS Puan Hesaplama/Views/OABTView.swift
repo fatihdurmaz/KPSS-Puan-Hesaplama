@@ -53,9 +53,8 @@ struct OABTView: View {
     
     @State private var isShowingSheet = false
     
-    private let adCoordinator = AdCoordinator()
-    @State private var viewModel = CalculateViewModel()
-    
+    private let adCoordinator = AdCoordinator.shared
+
     var body: some View {
         VStack {
             
@@ -164,10 +163,7 @@ struct OABTView: View {
                         modelContext.insert(result2022OABT)
                         
                         // Admob
-                        if viewModel.calculateCount % 15 == 0{
-                            adCoordinator.presentAd()
-                        }
-                        viewModel.calculateCount += 1
+
                     }
                     .disabled(formKonrol)
                     .sensoryFeedback(.success, trigger: sonucOABT2022)

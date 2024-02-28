@@ -14,7 +14,7 @@ struct BannerView: UIViewControllerRepresentable {
     
     func makeUIViewController(context: Context) -> some UIViewController {
         let bannerViewController = BannerViewController()
-        bannerView.adUnitID = Constants.bannerUnitID
+        bannerView.adUnitID = Constants.bannerUnitIDTest
         bannerView.rootViewController = bannerViewController
         bannerView.delegate = context.coordinator
         bannerView.translatesAutoresizingMaskIntoConstraints = false
