@@ -27,11 +27,9 @@ class AdsManager {
     
     func increaseBannerAdCounter(){
         bannerAdCounter += 1
-        print("Banner Counter \(bannerAdCounter)")
     }
     
     func increaseInterstitialAdCounter(){
         interstitialAdCounter += 1
-        print("Interstitial Counter \(interstitialAdCounter)")
     }
 }

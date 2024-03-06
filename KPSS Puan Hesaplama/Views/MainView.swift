@@ -17,7 +17,7 @@ struct MainView: View {
     var size: CGSize {
         return GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(width).size
     }
-
+    
     var body: some View {
         NavigationStack {
             VStack {
