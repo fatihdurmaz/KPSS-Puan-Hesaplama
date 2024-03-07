@@ -13,7 +13,7 @@ struct ResultView: View {
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \Result.tarih, order: .reverse) private var results: [Result]
     @Binding var selectionTabItem: Int
-
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -93,11 +93,15 @@ struct ResultView: View {
                                 }
                                 
                             } actions: {
-                                Button("KPSS Puan Hesaplaması Yap"){
+                                Button(action: {
                                     selectionTabItem = 0
-                                }
-                                .bold()
-                                .font(.title3)
+                                }, label: {
+                                    Text("KPSS Puan Hesaplaması Yap")
+                                        .bold()
+                                        .font(.title3)
+                                        .padding()
+                                })
+                                .buttonStyle(.bordered)
                             }
                             
                         }

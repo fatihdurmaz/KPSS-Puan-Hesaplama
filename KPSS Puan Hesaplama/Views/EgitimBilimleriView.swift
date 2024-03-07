@@ -24,17 +24,20 @@ struct EgitimBilimleriView: View {
     @State private var isShowingSheet = false
     
     private let adCoordinator = AdCoordinator.shared
-
+    
     var body: some View {
         VStack {
             
             Form {
                 Section {
-                    Stepper("Doğru Sayısı: \(gyDogruSayisi, specifier: "%.0f")", value: $gyDogruSayisi, in: 1...60)
-                        .sensoryFeedback(.selection, trigger: gyDogruSayisi)
-                    
-                    Stepper("Yanlış Sayısı: \(gyYanlisSayisi, specifier: "%.0f")", value: $gyYanlisSayisi, in: 0...60)
-                        .sensoryFeedback(.selection, trigger: gyYanlisSayisi)
+                    Stepper( value: $gyDogruSayisi, in: 1...60){
+                        Label("Doğru Sayısı: \(gyDogruSayisi, specifier: "%.0f")", systemImage: "checkmark.circle")
+                    }
+                    .sensoryFeedback(.selection, trigger: gyDogruSayisi)
+                    Stepper(value: $gyYanlisSayisi, in: 0...60){
+                        Label("Yanlış Sayısı: \(gyYanlisSayisi, specifier: "%.0f")", systemImage: "xmark.circle")
+                    }
+                    .sensoryFeedback(.selection, trigger: gyYanlisSayisi)
                     
                 } header: {
                     Text("Genel Yetenek")
@@ -48,12 +51,15 @@ struct EgitimBilimleriView: View {
                 }
                 
                 Section {
-                    Stepper("Doğru Sayısı: \(gkDogruSayisi, specifier: "%.0f")", value: $gkDogruSayisi, in: 1...60)
-                        .sensoryFeedback(.selection, trigger: gkDogruSayisi)
+                    Stepper(value: $gkDogruSayisi, in: 1...60){
+                        Label("Doğru Sayısı: \(gkDogruSayisi, specifier: "%.0f")", systemImage: "checkmark.circle")
+                    }
+                    .sensoryFeedback(.selection, trigger: gkDogruSayisi)
                     
-                    Stepper("Yanlış Sayısı: \(gkYanlisSayisi, specifier: "%.0f")", value: $gkYanlisSayisi, in: 0...60)
-                        .sensoryFeedback(.selection, trigger: gkYanlisSayisi)
-                    
+                    Stepper(value: $gkYanlisSayisi, in: 0...60){
+                        Label("Yanlış Sayısı: \(gkYanlisSayisi, specifier: "%.0f")", systemImage: "xmark.circle")
+                    }
+                    .sensoryFeedback(.selection, trigger: gkYanlisSayisi)
                 } header: {
                     Text("Genel Kültür")
                         .bold()
@@ -66,11 +72,15 @@ struct EgitimBilimleriView: View {
                 }
                 
                 Section {
-                    Stepper("Doğru Sayısı: \(ebDogruSayisi, specifier: "%.0f")", value: $ebDogruSayisi, in: 1...80)
-                        .sensoryFeedback(.selection, trigger: ebDogruSayisi)
+                    Stepper(value: $ebDogruSayisi, in: 1...80){
+                        Label("Doğru Sayısı: \(ebDogruSayisi, specifier: "%.0f")", systemImage: "checkmark.circle")
+                    }
+                    .sensoryFeedback(.selection, trigger: ebDogruSayisi)
                     
-                    Stepper("Yanlış Sayısı: \(ebYanlisSayisi, specifier: "%.0f")", value: $ebYanlisSayisi, in: 0...80)
-                        .sensoryFeedback(.selection, trigger: ebYanlisSayisi)
+                    Stepper(value: $ebYanlisSayisi, in: 0...80){
+                        Label("Yanlış Sayısı: \(ebYanlisSayisi, specifier: "%.0f")", systemImage: "xmark.circle")
+                    }
+                    .sensoryFeedback(.selection, trigger: ebYanlisSayisi)
                     
                     HesaplaButton(title: "Hesapla") {
                         let gkNet = gkDogruSayisi - (gkYanlisSayisi / 4)
