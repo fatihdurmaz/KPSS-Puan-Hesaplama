@@ -25,7 +25,7 @@ class AdCoordinator: NSObject,GADFullScreenContentDelegate {
         let request = GADRequest()
         request.scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
         GADInterstitialAd.load(
-            withAdUnitID: Constants.interstitialUnitIDTest, request: request
+            withAdUnitID: Constants.interstitialUnitID, request: request
         ) { ad, error in
             if let error = error {
                 return print("Failed to load ad with error: \(error.localizedDescription)")
