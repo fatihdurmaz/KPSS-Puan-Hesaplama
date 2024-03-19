@@ -89,4 +89,4 @@ fastlane/test_output
 
 iOSInjectionProject/
 KPSSPuanHesaplama/Resources/GoogleService-Info.plist
-/Resources/GoogleService-Info.plist
+Resources/GoogleService-Info.plist
