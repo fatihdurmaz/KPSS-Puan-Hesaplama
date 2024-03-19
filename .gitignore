@@ -29,6 +29,7 @@ DerivedData/
 *.ipa
 *.dSYM.zip
 *.dSYM
+.DS_Store
 
 ## Playgrounds
 timeline.xctimeline
@@ -89,4 +90,3 @@ fastlane/test_output
 
 iOSInjectionProject/
 KPSS Puan Hesaplama/Resources/GoogleService-Info.plist
-Resources/GoogleService-Info.plist
