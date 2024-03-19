@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE02B15E2B6AE549003C5485 /* HesaplaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE02B15D2B6AE549003C5485 /* HesaplaButton.swift */; };
+		DE2166AC2BA9676F00F4D1F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE2166AB2BA9676F00F4D1F7 /* GoogleService-Info.plist */; };
 		DE45D8772B7AAD06001DDED5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45D8762B7AAD06001DDED5 /* Result.swift */; };
 		DE4875FE2B8BD4D60074D4F1 /* UIOnboarding in Frameworks */ = {isa = PBXBuildFile; productRef = DE4875FD2B8BD4D60074D4F1 /* UIOnboarding */; };
 		DE4876022B8BD62F0074D4F1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4876012B8BD62F0074D4F1 /* OnboardingView.swift */; };
@@ -36,7 +37,6 @@
 		DEBB882C2B69989100DA8B6B /* EgitimBilimleriView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB882B2B69989100DA8B6B /* EgitimBilimleriView.swift */; };
 		DEBB882E2B69989A00DA8B6B /* OABTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB882D2B69989A00DA8B6B /* OABTView.swift */; };
 		DEC53F102B87D68000C6B476 /* notfound.json in Resources */ = {isa = PBXBuildFile; fileRef = DEC53F0F2B87D68000C6B476 /* notfound.json */; };
-		DEC5405E2B9854180094D9E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEC5405D2B9854180094D9E0 /* GoogleService-Info.plist */; };
 		DEF099132B8FA8230000E6D3 /* AdsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF099122B8FA8230000E6D3 /* AdsManager.swift */; };
 		DEFAE18D2B8F3FB2007C5A3A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DEFAE18C2B8F3FB2007C5A3A /* Lottie */; };
 /* End PBXBuildFile section */
@@ -67,6 +67,7 @@
 
 /* Begin PBXFileReference section */
 		DE02B15D2B6AE549003C5485 /* HesaplaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HesaplaButton.swift; sourceTree = "<group>"; };
+		DE2166AB2BA9676F00F4D1F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE45D8762B7AAD06001DDED5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		DE4876012B8BD62F0074D4F1 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		DE4876032B8BD64F0074D4F1 /* UIOnboardingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIOnboardingHelper.swift; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		DEBB882B2B69989100DA8B6B /* EgitimBilimleriView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EgitimBilimleriView.swift; sourceTree = "<group>"; };
 		DEBB882D2B69989A00DA8B6B /* OABTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OABTView.swift; sourceTree = "<group>"; };
 		DEC53F0F2B87D68000C6B476 /* notfound.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notfound.json; sourceTree = "<group>"; };
-		DEC5405D2B9854180094D9E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DEC540AC2B98587A0094D9E0 /* KPSS Puan Hesaplama.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "KPSS Puan Hesaplama.entitlements"; sourceTree = "<group>"; };
 		DEF099122B8FA8230000E6D3 /* AdsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -237,7 +237,7 @@
 		DEBB88202B6992B500DA8B6B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DEC5405D2B9854180094D9E0 /* GoogleService-Info.plist */,
+				DE2166AB2BA9676F00F4D1F7 /* GoogleService-Info.plist */,
 				DEF099112B8F4D6F0000E6D3 /* json */,
 				DEBB880F2B69914200DA8B6B /* KPSS_Puan_HesaplamaApp.swift */,
 				DEBB88132B69914300DA8B6B /* Assets.xcassets */,
@@ -359,7 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEBB88172B69914300DA8B6B /* Preview Assets.xcassets in Resources */,
-				DEC5405E2B9854180094D9E0 /* GoogleService-Info.plist in Resources */,
+				DE2166AC2BA9676F00F4D1F7 /* GoogleService-Info.plist in Resources */,
 				DEBB88142B69914300DA8B6B /* Assets.xcassets in Resources */,
 				DEC53F102B87D68000C6B476 /* notfound.json in Resources */,
 			);

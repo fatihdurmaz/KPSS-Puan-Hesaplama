@@ -88,5 +88,5 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
-KPSSPuanHesaplama/Resources/GoogleService-Info.plist
+KPSS Puan Hesaplama/Resources/GoogleService-Info.plist
 Resources/GoogleService-Info.plist
