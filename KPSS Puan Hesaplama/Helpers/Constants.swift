@@ -45,8 +45,8 @@ final class Constants {
     static let oabt2022GKKatsayi = 0.1515
     static let oabt2022EBKatsayi = 0.1498
     
-    static let bannerUnitID             = "ca-app-pub-x"
-    static let interstitialUnitID       = "ca-app-pub-x"
+    static let bannerUnitID             = "ca-app-pub-xxx"
+    static let interstitialUnitID       = "ca-app-pub-xxx"
     static let bannerUnitIDTest         = "ca-app-pub-3940256099942544/2435281174"
     static let interstitialUnitIDTest   = "ca-app-pub-3940256099942544/4411468910"
 }
