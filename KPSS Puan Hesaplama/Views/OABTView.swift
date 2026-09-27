@@ -53,8 +53,6 @@ struct OABTView: View {
     
     @State private var isShowingSheet = false
     
-    private let adCoordinator = AdCoordinator.shared
-
     var body: some View {
         VStack {
             
@@ -162,8 +160,6 @@ struct OABTView: View {
                         let result2022OABT = Result(sinavAdi: "2022 ÖABT", gyNet: gyNet, gkNet: gkNet, ebNet: ebNet, oabtNet: oabtNet, sonuc: sonuc2022)
                         modelContext.insert(result2022OABT)
                         
-                        // Admob
-
                     }
                     .disabled(formKonrol)
                     .sensoryFeedback(.success, trigger: sonucOABT2022)

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE02B15E2B6AE549003C5485 /* HesaplaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE02B15D2B6AE549003C5485 /* HesaplaButton.swift */; };
-		DE2166AC2BA9676F00F4D1F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE2166AB2BA9676F00F4D1F7 /* GoogleService-Info.plist */; };
+		DE2CECE53069230A0062C9D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE2CECE43069230A0062C9D2 /* GoogleService-Info.plist */; };
 		DE45D8772B7AAD06001DDED5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45D8762B7AAD06001DDED5 /* Result.swift */; };
 		DE4875FE2B8BD4D60074D4F1 /* UIOnboarding in Frameworks */ = {isa = PBXBuildFile; productRef = DE4875FD2B8BD4D60074D4F1 /* UIOnboarding */; };
 		DE4876022B8BD62F0074D4F1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4876012B8BD62F0074D4F1 /* OnboardingView.swift */; };
@@ -18,10 +18,6 @@
 		DE64808A2BA17A07000A5BE8 /* UNNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DE6480832BA17A07000A5BE8 /* UNNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DE6480912BA17A22000A5BE8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DE6480902BA17A22000A5BE8 /* FirebaseAnalytics */; };
 		DE6480932BA17A45000A5BE8 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = DE6480922BA17A45000A5BE8 /* FirebaseMessaging */; };
-		DE6A6E952B83F2B000DCBBAD /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = DE6A6E942B83F2B000DCBBAD /* GoogleMobileAds */; };
-		DE6A6E992B83F3A400DCBBAD /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A6E982B83F3A400DCBBAD /* BannerViewController.swift */; };
-		DE6A6E9B2B83F3F000DCBBAD /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A6E9A2B83F3EF00DCBBAD /* BannerView.swift */; };
-		DE6A6E9D2B83F57D00DCBBAD /* AdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A6E9C2B83F57D00DCBBAD /* AdCoordinator.swift */; };
 		DE6A9BDE2B74199C009812BB /* SonucView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A9BDD2B74199C009812BB /* SonucView.swift */; };
 		DE8E33EF2B8A7EA9005CF00C /* UIOnboarding in Frameworks */ = {isa = PBXBuildFile; productRef = DE8E33EE2B8A7EA9005CF00C /* UIOnboarding */; };
 		DE9680242B74C9F10072953A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9680232B74C9F10072953A /* Constants.swift */; };
@@ -37,7 +33,6 @@
 		DEBB882C2B69989100DA8B6B /* EgitimBilimleriView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB882B2B69989100DA8B6B /* EgitimBilimleriView.swift */; };
 		DEBB882E2B69989A00DA8B6B /* OABTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB882D2B69989A00DA8B6B /* OABTView.swift */; };
 		DEC53F102B87D68000C6B476 /* notfound.json in Resources */ = {isa = PBXBuildFile; fileRef = DEC53F0F2B87D68000C6B476 /* notfound.json */; };
-		DEF099132B8FA8230000E6D3 /* AdsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF099122B8FA8230000E6D3 /* AdsManager.swift */; };
 		DEFAE18D2B8F3FB2007C5A3A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DEFAE18C2B8F3FB2007C5A3A /* Lottie */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +62,7 @@
 
 /* Begin PBXFileReference section */
 		DE02B15D2B6AE549003C5485 /* HesaplaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HesaplaButton.swift; sourceTree = "<group>"; };
-		DE2166AB2BA9676F00F4D1F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DE2CECE43069230A0062C9D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE45D8762B7AAD06001DDED5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		DE4876012B8BD62F0074D4F1 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		DE4876032B8BD64F0074D4F1 /* UIOnboardingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIOnboardingHelper.swift; sourceTree = "<group>"; };
@@ -75,9 +70,6 @@
 		DE6480852BA17A07000A5BE8 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		DE6480872BA17A07000A5BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE6A6E962B83F2F000DCBBAD /* KPSS-Puan-Hesaplama-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "KPSS-Puan-Hesaplama-Info.plist"; sourceTree = SOURCE_ROOT; };
-		DE6A6E982B83F3A400DCBBAD /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
-		DE6A6E9A2B83F3EF00DCBBAD /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
-		DE6A6E9C2B83F57D00DCBBAD /* AdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCoordinator.swift; sourceTree = "<group>"; };
 		DE6A9BDD2B74199C009812BB /* SonucView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonucView.swift; sourceTree = "<group>"; };
 		DE9680232B74C9F10072953A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DEBB880C2B69914200DA8B6B /* KPSS Puan Hesaplama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KPSS Puan Hesaplama.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,7 +86,6 @@
 		DEBB882D2B69989A00DA8B6B /* OABTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OABTView.swift; sourceTree = "<group>"; };
 		DEC53F0F2B87D68000C6B476 /* notfound.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notfound.json; sourceTree = "<group>"; };
 		DEC540AC2B98587A0094D9E0 /* KPSS Puan Hesaplama.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "KPSS Puan Hesaplama.entitlements"; sourceTree = "<group>"; };
-		DEF099122B8FA8230000E6D3 /* AdsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +101,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE6A6E952B83F2B000DCBBAD /* GoogleMobileAds in Frameworks */,
 				DE4875FE2B8BD4D60074D4F1 /* UIOnboarding in Frameworks */,
 				DE6480912BA17A22000A5BE8 /* FirebaseAnalytics in Frameworks */,
 				DE64807E2BA179C7000A5BE8 /* FirebaseMessaging in Frameworks */,
@@ -155,21 +145,9 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DE6A6E972B83F39600DCBBAD /* Admob */ = {
-			isa = PBXGroup;
-			children = (
-				DE6A6E982B83F3A400DCBBAD /* BannerViewController.swift */,
-				DE6A6E9A2B83F3EF00DCBBAD /* BannerView.swift */,
-				DE6A6E9C2B83F57D00DCBBAD /* AdCoordinator.swift */,
-				DEF099122B8FA8230000E6D3 /* AdsManager.swift */,
-			);
-			path = Admob;
-			sourceTree = "<group>";
-		};
 		DE9680252B74CE3D0072953A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				DE6A6E972B83F39600DCBBAD /* Admob */,
 				DE9680232B74C9F10072953A /* Constants.swift */,
 				DE4876012B8BD62F0074D4F1 /* OnboardingView.swift */,
 				DE4876032B8BD64F0074D4F1 /* UIOnboardingHelper.swift */,
@@ -237,7 +215,7 @@
 		DEBB88202B6992B500DA8B6B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DE2166AB2BA9676F00F4D1F7 /* GoogleService-Info.plist */,
+				DE2CECE43069230A0062C9D2 /* GoogleService-Info.plist */,
 				DEF099112B8F4D6F0000E6D3 /* json */,
 				DEBB880F2B69914200DA8B6B /* KPSS_Puan_HesaplamaApp.swift */,
 				DEBB88132B69914300DA8B6B /* Assets.xcassets */,
@@ -292,7 +270,6 @@
 			);
 			name = "KPSS Puan Hesaplama";
 			packageProductDependencies = (
-				DE6A6E942B83F2B000DCBBAD /* GoogleMobileAds */,
 				DE8E33EE2B8A7EA9005CF00C /* UIOnboarding */,
 				DE4875FD2B8BD4D60074D4F1 /* UIOnboarding */,
 				DEFAE18C2B8F3FB2007C5A3A /* Lottie */,
@@ -311,7 +288,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					DE6480822BA17A07000A5BE8 = {
 						CreatedOnToolsVersion = 15.3;
@@ -331,7 +308,6 @@
 			);
 			mainGroup = DEBB88032B69914200DA8B6B;
 			packageReferences = (
-				DE6A6E932B83F2B000DCBBAD /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 				DE8E33ED2B8A7EA9005CF00C /* XCRemoteSwiftPackageReference "UIOnboarding" */,
 				DEFAE18B2B8F3FB2007C5A3A /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				DE64807B2BA179B1000A5BE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
@@ -359,7 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEBB88172B69914300DA8B6B /* Preview Assets.xcassets in Resources */,
-				DE2166AC2BA9676F00F4D1F7 /* GoogleService-Info.plist in Resources */,
+				DE2CECE53069230A0062C9D2 /* GoogleService-Info.plist in Resources */,
 				DEBB88142B69914300DA8B6B /* Assets.xcassets in Resources */,
 				DEC53F102B87D68000C6B476 /* notfound.json in Resources */,
 			);
@@ -386,17 +362,13 @@
 				DEBB882A2B69988600DA8B6B /* LisansView.swift in Sources */,
 				DEBB881E2B69926C00DA8B6B /* RootView.swift in Sources */,
 				DEBB88262B69987400DA8B6B /* OrtaogretimView.swift in Sources */,
-				DE6A6E9B2B83F3F000DCBBAD /* BannerView.swift in Sources */,
 				DEBB88242B6992EA00DA8B6B /* ResultView.swift in Sources */,
-				DE6A6E9D2B83F57D00DCBBAD /* AdCoordinator.swift in Sources */,
 				DE4876042B8BD64F0074D4F1 /* UIOnboardingHelper.swift in Sources */,
-				DE6A6E992B83F3A400DCBBAD /* BannerViewController.swift in Sources */,
 				DEBB88282B69987F00DA8B6B /* OnlisansView.swift in Sources */,
 				DEBB88222B6992D700DA8B6B /* MainView.swift in Sources */,
 				DEBB88102B69914200DA8B6B /* KPSS_Puan_HesaplamaApp.swift in Sources */,
 				DEBB882C2B69989100DA8B6B /* EgitimBilimleriView.swift in Sources */,
 				DEBB882E2B69989A00DA8B6B /* OABTView.swift in Sources */,
-				DEF099132B8FA8230000E6D3 /* AdsManager.swift in Sources */,
 				DE6A9BDE2B74199C009812BB /* SonucView.swift in Sources */,
 				DE9680242B74C9F10072953A /* Constants.swift in Sources */,
 			);
@@ -419,7 +391,6 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5RM3B24YU6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UNNotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = UNNotificationServiceExtension;
@@ -446,7 +417,6 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5RM3B24YU6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UNNotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = UNNotificationServiceExtension;
@@ -502,6 +472,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 5RM3B24YU6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -519,12 +490,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -565,6 +537,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 5RM3B24YU6;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -576,11 +549,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -589,31 +563,31 @@
 		DEBB881B2B69914300DA8B6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "KPSS Puan Hesaplama/KPSS Puan Hesaplama.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"KPSS Puan Hesaplama/Preview Content\"";
-				DEVELOPMENT_TEAM = 5RM3B24YU6;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_VERSION = A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "KPSS-Puan-Hesaplama-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "KPSS Puan Hesaplama";
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Bu tanımlayıcı size kişiselleştirilmiş reklamlar sunmak için kullanılacaktır.";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuumamobile.KPSSPuanHesaplama;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -628,31 +602,31 @@
 		DEBB881C2B69914300DA8B6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "KPSS Puan Hesaplama/KPSS Puan Hesaplama.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"KPSS Puan Hesaplama/Preview Content\"";
-				DEVELOPMENT_TEAM = 5RM3B24YU6;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_VERSION = A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "KPSS-Puan-Hesaplama-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "KPSS Puan Hesaplama";
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Bu tanımlayıcı size kişiselleştirilmiş reklamlar sunmak için kullanılacaktır.";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuumamobile.KPSSPuanHesaplama;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -705,14 +679,6 @@
 				minimumVersion = 10.22.1;
 			};
 		};
-		DE6A6E932B83F2B000DCBBAD /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 11.0.1;
-			};
-		};
 		DE8E33ED2B8A7EA9005CF00C /* XCRemoteSwiftPackageReference "UIOnboarding" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/lascic/UIOnboarding";
@@ -750,11 +716,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DE64807B2BA179B1000A5BE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
-		};
-		DE6A6E942B83F2B000DCBBAD /* GoogleMobileAds */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DE6A6E932B83F2B000DCBBAD /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
-			productName = GoogleMobileAds;
 		};
 		DE8E33EE2B8A7EA9005CF00C /* UIOnboarding */ = {
 			isa = XCSwiftPackageProductDependency;

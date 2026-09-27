@@ -110,6 +110,7 @@ struct ResultView: View {
                 
             }
             .navigationTitle("Hesaplamalar")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 EditButton()
             }

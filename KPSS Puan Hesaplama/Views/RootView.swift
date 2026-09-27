@@ -6,11 +6,9 @@
 //
 
 import SwiftUI
-import AppTrackingTransparency
 
 struct RootView: View {
     @AppStorage("showingOnboarding") private var showingOnboarding = true
-    @State var adsManager = AdsManager()
     @State private var selectionItem = 0
 
 
@@ -35,12 +33,8 @@ struct RootView: View {
                 .edgesIgnoringSafeArea(.all)
                 .onDisappear{
                     showingOnboarding = false
-                    ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in })
                 }
         })
-        .onAppear{
-            adsManager.increaseBannerAdCounter()
-        }
         .tint(.main)
     }
 }

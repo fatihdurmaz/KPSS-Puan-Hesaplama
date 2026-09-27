@@ -23,8 +23,6 @@ struct EgitimBilimleriView: View {
     @State private var sonucEB2023: Double = 0
     @State private var isShowingSheet = false
     
-    private let adCoordinator = AdCoordinator.shared
-    
     var body: some View {
         VStack {
             
@@ -100,8 +98,6 @@ struct EgitimBilimleriView: View {
                         
                         modelContext.insert(result2022EB)
                         modelContext.insert(result2023EB)
-                        
-                        // Admob
                         
                     }
                     .disabled(formKonrol)

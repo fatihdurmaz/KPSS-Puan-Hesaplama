@@ -48,8 +48,8 @@ struct UIOnboardingHelper {
         return .init(icon: .init(named: "onboarding-notice-icon"),
                      text: "Geçmiş yılların istatistikleri kullanarak hazırlanmıştır.",
                      linkTitle: "Sorularınız için",
-                     link: "https://www.yuumamobile.com/hakkimda",
-                     tint: .main)
+                     link: "https://www.yuuma.studio"
+        )
     }
     
     static func setUpButton() -> UIOnboardingButtonConfiguration {

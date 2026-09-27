@@ -6,18 +6,10 @@
 //
 
 import SwiftUI
-import GoogleMobileAds
 
 
 struct MainView: View {
     @Binding var selectionTabItem: Int
-    @State private var adsManager = AdsManager()
-    
-    var width: CGFloat = UIScreen.main.bounds.width
-    var size: CGSize {
-        return GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(width).size
-    }
-    
     var body: some View {
         NavigationStack {
             VStack {
@@ -106,15 +98,9 @@ struct MainView: View {
                     }
                     
                 }
-                if adsManager.shouldShowBannerAd() {
-                    if selectionTabItem == 0 {
-                        BannerView()
-                            .frame(height: size.height)
-                    }
-                    
-                }
             }
             .navigationTitle("KPSS Puan Hesaplama")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

@@ -16,8 +16,6 @@ struct OnlisansView: View {
     @State private var gkYanlisSayisi: Double = 0
     @State private var sonuc: Double = 0
     
-    private let adCoordinator = AdCoordinator.shared
-    @State private var adsManager = AdsManager()
 
     var body: some View {
         VStack {
@@ -81,11 +79,6 @@ struct OnlisansView: View {
                         let result = Result(sinavAdi: "2022 Önlisans KPSS", gyNet: gyNet, gkNet: gkNet, sonuc: sonuc)
                         modelContext.insert(result)
                         
-                        // Admob
-                        if adsManager.shouldShowInterstitialAd(){
-                            adCoordinator.presentAd()
-                        }
-                        adsManager.increaseInterstitialAdCounter()
                     }
                     .disabled(formKonrol)
                     .sensoryFeedback(.success, trigger: sonuc)

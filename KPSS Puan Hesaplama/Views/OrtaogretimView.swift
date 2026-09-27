@@ -18,9 +18,6 @@ struct OrtaogretimView: View {
     @State private var gkYanlisSayisi: Double = 0
     @State private var sonuc: Double = 0
     
-    private let adCoordinator = AdCoordinator.shared
-    @State private var adsManager = AdsManager()
-    
     var body: some View {
         VStack {
             
@@ -82,12 +79,6 @@ struct OrtaogretimView: View {
                         // SwiftData
                         let result = Result(sinavAdi: "2022 Ortaöğretim KPSS", gyNet: gyNet, gkNet: gkNet, sonuc: sonuc)
                         modelContext.insert(result)
-                        
-                        // Admob
-                        if adsManager.shouldShowInterstitialAd(){
-                            adCoordinator.presentAd()
-                        }
-                        adsManager.increaseInterstitialAdCounter()
                         
                     }
                     .disabled(formKonrol)
